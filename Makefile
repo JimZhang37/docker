@@ -21,13 +21,13 @@ test:
 	#python -m pytest -vv --cov=myrepolib tests/*.py
 	#python -m pytest --nbval notebook.ipynb
 
-#validate-circleci:
+validate-circleci:
     # See https://circleci.com/docs/2.0/local-cli/#processing-a-config
- #   circleci config process .circleci/config.yml
+	circleci config process .circleci/config.yml
 
-#run-circleci-local:
+run-circleci-local:
     # See https://circleci.com/docs/2.0/local-cli/#running-a-job
- #   circleci local execute
+	circleci local execute
 
 lint:
 	# See local hadolint install instructions:   https://github.com/hadolint/hadolint
