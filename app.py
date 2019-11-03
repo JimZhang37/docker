@@ -54,7 +54,6 @@ def predict():
         """
     
     # Logging the input payload
-    LOG.info(f"before json_payloadaaaaaaaaaaaaaaaaaaaa")
     json_payload = request.json
     LOG.info(f"JSON payload: \n{json_payload}")
     inference_payload = pd.DataFrame(json_payload)
@@ -63,11 +62,11 @@ def predict():
     scaled_payload = scale(inference_payload)
     # get an output prediction from the pretrained model, clf
     prediction = list(clf.predict(scaled_payload))
+    LOG.info(f"Output prediction: {prediction}")
     # TO DO:  Log the output prediction value
     return jsonify({'prediction': prediction})
 
 if __name__ == "__main__":
     # load pretrained model as clf
     clf = joblib.load("./model_data/boston_housing_prediction.joblib")
-    LOG.info(f"abczyh")
     app.run(host='0.0.0.0', port=80, debug=True) # specify port=80
