@@ -1,1 +1,10 @@
 <paste log output from Kubernetes-mediated prediction, here>
+
+^Cjimzhang (master *) project-ml-microservice-kubernetes
+$ ./run_kubernetes.sh 
+Error from server (AlreadyExists): pods "zhangyhggprediction" already exists
+NAME                  READY   STATUS    RESTARTS   AGE
+zhangyhggprediction   1/1     Running   0          5m56s
+Forwarding from 127.0.0.1:8080 -> 80
+Forwarding from [::1]:8080 -> 80
+Handling connection for 8080
